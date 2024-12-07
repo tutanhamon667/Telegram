@@ -50,6 +50,8 @@ dependencies {
 
     implementation 'com.google.android.gms:play-services-mlkit-subject-segmentation:16.0.0-beta1'
     implementation 'com.google.android.gms:play-services-mlkit-image-labeling:16.0.8'
+    implementation 'org.bouncycastle:bcpg-jdk15on:1.68'
+    implementation 'org.bouncycastle:bcprov-jdk15on:1.68'
     constraints {
         implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.0") {
             because("kotlin-stdlib-jdk7 is now a part of kotlin-stdlib")
@@ -193,7 +195,6 @@ android {
     }
     namespace 'org.telegram.messenger'
 }
-
 
 def getProps(String propName) {
     def propsFile = rootProject.file('local.properties')
